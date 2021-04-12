@@ -1,4 +1,4 @@
-# ** Web Stack**
+# **Holberton Specializations - Web Stack**
 
 This repository is for the first trimester of Specialization in Web Stack.
 
