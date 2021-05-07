@@ -24,8 +24,12 @@
   --color-grey: #a0a0a0;
   --color-light-grey: #f3f3f3;
   --color-dark-grey: #353535;
+  --color-red: #cd3e65;
+  --color-green: #08805b;
 
   --text-color: var(--color-black);
+  --valid-color:var(--color-green );
+  --error-color:var(--color-red);
 
   --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -151,6 +155,15 @@ a:active {
   transition-property: color, background-color;
 }
 
+.button-primary {
+  color: var(--color-white);
+  background: var(--color-primary);
+}
+
+.button-primary:hover {
+  color: var(--color-primary);
+  background: var(--color-white);
+}
 /* Helpers
     ============================= */
 
@@ -805,7 +818,6 @@ input:required:valid:not(:placeholder-shown),
 textarea:valid:not(:placeholder-shown) {
   border: 0.1rem solid var(--valid-color);
 }
-
 
 /*** SEARCH FORM ***/
 
