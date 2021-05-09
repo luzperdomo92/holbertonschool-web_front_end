@@ -656,6 +656,7 @@ ul.row {
   margin: 10rem 0 0 auto;
   padding-left: 7rem;
 }
+
 .post-comments .section-title {
   font-variant: small-caps;
 }
@@ -716,7 +717,6 @@ textarea:focus {
   font-size: var(--font-size-small);
 }
 
-
 /* Form group
     ============================= */
 
@@ -727,8 +727,8 @@ textarea:focus {
 }
 
 .form-group:focus-within {
-    background-color: var(--color-light-grey);
-    transition: .3s;
+  background-color: var(--color-light-grey);
+  transition: .3s;
 }
 
 /* Form field
