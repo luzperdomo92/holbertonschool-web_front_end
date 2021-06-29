@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 4</title>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+</head>
+<body>
+
+
+  <script type="application/javascript">
+    let availableItems = ['Shampoo', 'Soap', 'Sponge', 'Water'];
+
+    if (typeof (sessionStorage) !== "undefined") {
+      createStore();
+      displayCart();
+    } else {
+      alert('Sorry, your browser does not support local storage. Try again with a better one');
+    }
+
+
+    function addItemToCart(item){
+      sessionStorage.setItem(item, true);
+    }
+
+    function createStore() {
+      const unorder_list = document.createElement('ul');
+      availableItems.forEach(item => {
+        let list = document.createElement('li');
+        list.innerHTML = item;
+
+        list.setAttribute('onclick', 'addItemToCart( " ' + item + ' " )');
+        unorder_list.append(list);
+        document.querySelector("body").append(unorder_list);
+      })
+    }
+
+    function displayCart() {
+      if (sessionStorage.length !== 0) {
+        const paragraph = document.createElement("p");
+        paragraph.innerHTML = `You previously had ${sessionStorage.length} items in your cart`;
+        document.querySelector("body").append(paragraph);
+      }
+    }
+  </script>
+</body>
+</html>
